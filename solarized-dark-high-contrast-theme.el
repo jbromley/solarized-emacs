@@ -21,7 +21,7 @@
 ;;
 ;;; Code:
 
-(require 'solarized)
+(require 'solarized-themes)
 (eval-when-compile
   (require 'solarized-palettes))
 

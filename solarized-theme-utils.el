@@ -25,7 +25,7 @@
 
 ;;;; Code:
 (require 'cl-lib)
-(require 'solarized)
+(require 'solarized-themes)
 
 (defun solarized-import-faces (&optional regexp already-defined)
   "Imports current effective face definitions by regular expression

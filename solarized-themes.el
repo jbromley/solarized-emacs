@@ -4,6 +4,10 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; Author: Thomas Frössman <thomasf@jossystem.se>
+;; URL: http://github.com/bbatsov/solarized-emacs
+;; Version: 2.0.4
+;; Package-Requires: ((emacs "24.1"))
+;; Keywords: convenience, themes, solarized
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -19,9 +23,22 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
-;; Main solarized file
-
+;;
+;; A port of Solarized to Emacs.
+;;
+;;; Installation:
+;;
+;;   Drop the solarized-theme.el somewhere in your `load-path' and
+;; the two themes in a folder that is on `custom-theme-load-path'
+;; and enjoy!
+;;
+;; Don't forget that the theme requires Emacs 24.
+;;
+;;; Credits
+;;
+;; Ethan Schoonover created the original theme for vim on such this port
+;; is based.
+;;
 ;;; Code:
 
 (require 'cl-lib)
@@ -412,7 +429,7 @@ If OVERWRITE is non-nil, overwrite theme file if exist."
                                         solarized-theme-dir)
         (mapc (lambda (elm)
                 (insert (pp-to-string elm)))
-              `((require 'solarized)
+              `((require 'solarized-themes)
                 (deftheme ,theme-name
                   ,(format "The %s colour theme of Solarized colour theme flavor." theme-name))
                 (solarized-with-color-variables ',variant ',theme-name ',color-palette ',childtheme-sexp)
@@ -460,10 +477,10 @@ Useful after changing some configuration options or tweaking some colors."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'solarized)
+(provide 'solarized-themes)
 
 ;; Local Variables:
 ;; indent-tabs-mode: nil
 ;; End:
 
-;;; solarized.el ends here
+;;; solarized-theme.el ends here

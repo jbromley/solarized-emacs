@@ -12,7 +12,7 @@ This is an example of how to adapt derived child themes to the changes:
 **my-solarized.el**
 
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 
 (defun my-solarized-theme ()
   "My personal solarized theme customization."
@@ -31,7 +31,7 @@ This is an example of how to adapt derived child themes to the changes:
 
 **themes/my-solarized-light-theme.el**
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 (require 'my-solarized)
 
 (deftheme my-solarized-light "The light variant of the Solarized colour theme")
@@ -42,7 +42,7 @@ This is an example of how to adapt derived child themes to the changes:
 
 **themes/my-solarized-dark-theme.el**
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 (require 'my-solarized)
 
 (deftheme my-solarized-dark "The light variant of the Solarized colour theme")
@@ -56,7 +56,7 @@ This is an example of how to adapt derived child themes to the changes:
 
 **my-solarized.el**
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 
 (setq my-solarized-faces
       '("My personal solarized theme customization."
@@ -76,7 +76,7 @@ This is an example of how to adapt derived child themes to the changes:
 **themes/my-solarized-light-theme.el**
 
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 (require 'my-solarized)
 (eval-when-compile
   (require 'solarized-palettes))
@@ -94,7 +94,7 @@ This is an example of how to adapt derived child themes to the changes:
 **my-solarized-dark-theme.el**
 
 ```el
-(require 'solarized)
+(require 'solarized-themes)
 (require 'my-solarized)
 (eval-when-compile
   (require 'solarized-palettes))

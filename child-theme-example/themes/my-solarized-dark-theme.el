@@ -1,4 +1,4 @@
-(require 'solarized)
+(require 'solarized-themes)
 (require 'my-solarized)
 (eval-when-compile
   (require 'solarized-palettes))
